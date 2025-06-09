@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
+    int naocoloca;
     int v [50];
     int soma= 0;
     for (int i=0; i<50; i++){
