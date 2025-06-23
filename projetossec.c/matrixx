@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main(){
     int tamanho;
-    INT coluna;
+    int coluna;
     scanf("%d", &tamanho);
     scanf("%d", &coluna);
     int num= 0 ;
