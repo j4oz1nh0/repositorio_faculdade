@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int tamanho;
+    INT coluna;
+    scanf("%d", &tamanho);
+    scanf("%d", &coluna);
+    int num= 0 ;
+    int matriz[tamanho][coluna];
+    int flag= 0;
+    while(num<(tamanho*coluna)){
+        for (int b = flag; b<tamanho-flag; b++){
+            num++;
+            matriz[flag][b]=num;
+        }
+        for (int c = flag+1; c<coluna-flag; c++){
+            num++;
+            matriz[c][coluna-flag-1]=num;
+        } 
+        for(int d = (tamanho-2-flag); d>=flag; d--){
+            num++;
+            matriz[tamanho-flag-1][d]= num;
+        }
+        for(int e = (coluna-2-flag); e>flag; e--){
+            num++;
+            matriz[e][flag]= num;
+        }
+        flag++;
+    }
+        for (int f= 0; f<tamanho;f++){
+            for (int g= 0; g<coluna; g++){
+                printf("%4d  ", matriz[f][g]);
+                }
+            printf("\n");
+        }
+
+}
